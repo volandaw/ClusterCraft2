@@ -1,0 +1,10 @@
+# Kopie zapasowe
+app copy.py
+app1.py
+*copy.py
+*.log
+
+# Tymczasowe pliki Pythona i VS Code
+__pycache__/
+.vscode/
+*.pyc
