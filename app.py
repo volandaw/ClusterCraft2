@@ -194,7 +194,7 @@ elif page == "Raport klastrów":
             summary_rows.append(row)
 
         summary_df = pd.DataFrame(summary_rows)
-        st.dataframe(summary_df, use_container_width=True)
+        st.dataframe(summary_df, width="stretch")
 
 # -------------------------------------------------
 # STRONA 4 – PROFIL INDYWIDUALNY
@@ -243,3 +243,4 @@ elif page == "Profil indywidualny":
 
             st.write("### Opis klastra")
             st.info(cluster_info.get(cluster_name, ""))
+            
