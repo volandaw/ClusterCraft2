@@ -12,9 +12,31 @@ st.set_page_config(
     layout="wide"
 )
 
+# -------------------------------------------------
+# TYTUŁ I OPIS APLIKACJI (TU JEST IDEALNE MIEJSCE)
+# -------------------------------------------------
+st.title("ClusterCraft")
+st.caption("Zobacz, jak AI analizuje potencjał danych")
+
+st.divider()
+
+st.markdown("""
+**ClusterCraft** to edukacyjny prototyp, który pokazuje, jak sztuczna inteligencja
+może grupować profile osób na podstawie prostych, neutralnych informacji
+(np. styl pracy, preferencje).
+
+Aplikacja demonstruje, jak z pozornie zwykłych danych można wydobyć wzorce
+i sensowne struktury przy użyciu klasteryzacji AI.
+
+Aby skorzystać z aplikacji, wystarczy przejść przez ankietę lub wygenerować
+przykładowe dane i zobaczyć, jak algorytm tworzy grupy.
+
+*To narzędzie ma charakter pokazowy i edukacyjny – nie ocenia ani nie diagnozuje ludzi.*
+""")
+
 fake = Faker("pl_PL")
 
-# -------------------------------------------------
+# ----------------------------------
 # GENEROWANIE DANYCH
 # -------------------------------------------------
 def generate_data():
@@ -243,4 +265,3 @@ elif page == "Profil indywidualny":
 
             st.write("### Opis klastra")
             st.info(cluster_info.get(cluster_name, ""))
-            
